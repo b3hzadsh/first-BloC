@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-Widget myRow(String text, TextEditingController s) {
+Widget myRow(String text, TextEditingController s, function(String value)) {
   return Row(
     children: <Widget>[
       Expanded(
@@ -13,6 +13,7 @@ Widget myRow(String text, TextEditingController s) {
       Expanded(
         flex: 5,
         child: TextField(
+          onChanged: function,
           decoration: InputDecoration(
             labelText: "$text را وارد کنید",
             border: new OutlineInputBorder(

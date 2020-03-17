@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-StreamBuilder money(String benefit, time, Stream st, int radioButton) {
+StreamBuilder money(String benefit, String time, Stream st, int radioButton) {
   // rado button == periode
   int periode;
   int balance;
@@ -33,7 +33,8 @@ StreamBuilder money(String benefit, time, Stream st, int radioButton) {
 }
 
 //
-StreamBuilder time(String money, benefit, Stream<int> time, int radioButton) {
+StreamBuilder time(
+    String money, String benefit, Stream<int> time, int radioButton) {
   int periode;
   int balance;
 
@@ -62,7 +63,7 @@ StreamBuilder time(String money, benefit, Stream<int> time, int radioButton) {
 
 //
 StreamBuilder beneFit(
-    String money, time, Stream<int> benefit, int radioButton) {
+    String money, String time, Stream<int> benefit, int radioButton) {
   int periode;
   int balance;
 

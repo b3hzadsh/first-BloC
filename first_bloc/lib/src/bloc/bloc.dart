@@ -1,5 +1,6 @@
 import 'dart:async';
 
+// problem with make output from stream ! //TODO learn it
 class BloC {
   final _moneyStream = new StreamController();
   final _benefitStream = new StreamController();

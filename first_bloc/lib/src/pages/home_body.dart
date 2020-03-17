@@ -1,11 +1,15 @@
+import 'package:first_bloc/src/mixin/my_row_onchange.dart';
 import 'package:first_bloc/src/widgets/my_row.dart';
 import 'package:flutter/material.dart';
+import '../bloc/bloc.dart';
+
+final TextEditingController _firstMoneyField = new TextEditingController();
+final TextEditingController _soodField = new TextEditingController();
+final TextEditingController _timeField = new TextEditingController();
 
 class HomeBody extends StatelessWidget {
   //String _result = "فعلا هیچی";
-  final TextEditingController _firstMoneyField = new TextEditingController();
-  final TextEditingController _soodField = new TextEditingController();
-  final TextEditingController _timeField = new TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Center(
@@ -27,6 +31,7 @@ class HomeBody extends StatelessWidget {
             Container(
               margin: EdgeInsets.only(bottom: 15.0),
             ),
+            x,
             // Center(child: Text("مبلغ حاصل برابر:  " + "$_result")),
             //TODO add 3 radioButton for weekly,monthly and annual
           ],
@@ -34,4 +39,7 @@ class HomeBody extends StatelessWidget {
       ),
     );
   }
+
+  final StreamBuilder x =
+      time(_firstMoneyField.text, _soodField.text, bloc.time, 3);
 }
